@@ -1,0 +1,182 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  --bg-color: #fafafa;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-dim: #475569;
+  --border-color: #e2e8f0;
+  --accent: #048cd8;
+  --accent-red: #aa0000;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth reveal animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+
+/* Floating card animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(0deg); }
+}
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0) rotate(4deg) scale(0.9); }
+  50% { transform: translateY(-15px) rotate(2deg) scale(0.9); }
+}
+.book-float-1 { animation: float 6s ease-in-out infinite; }
+.book-float-2 { animation: float-reverse 7s ease-in-out infinite; animation-delay: 1s; }
+
+/* Custom UI Elements */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.04);
+}
+
+.spline-container,
+.spline-container iframe,
+[data-container-bg="true"] {
+  pointer-events: none;
+}
+
+/* Custom Checkbox */
+.tech-checkbox {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: rgba(15, 23, 42, 0.03);
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.tech-checkbox:checked {
+  border-color: var(--accent);
+  background-color: var(--accent);
+}
+.tech-checkbox:checked::after {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #fff;
+  border-radius: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Brand Button Styles */
+.btn-brand-red {
+  background-color: var(--accent-red);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(170, 0, 0, 0.3);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-brand-red:hover {
+  background-color: #bd0000;
+  box-shadow: 0 6px 18px rgba(170, 0, 0, 0.45);
+}
+
+.btn-brand-red:active {
+  background-color: #900000;
+}
+
+/* Motion helper */
+.motion-section {
+  scroll-margin-top: 7rem;
+}
+
+.nav-spy-link {
+  position: relative;
+  transition: transform .18s cubic-bezier(.2,.9,.2,1), color .18s cubic-bezier(.2,.9,.2,1), opacity .18s;
+}
+
+.nav-spy-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.45rem;
+  height: 2px;
+  border-radius: 9999px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .22s cubic-bezier(.34,1.56,.64,1), opacity .18s;
+  opacity: .75;
+}
+
+.nav-spy-link:hover {
+  color: var(--accent);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.nav-spy-link:hover::after,
+.nav-spy-link.is-active::after {
+  transform: scaleX(1);
+}
+
+.nav-spy-link.is-active {
+  color: var(--accent);
+  transform: translateY(-1px) scale(1.02);
+}
+
+.motion-cta,
+.motion-cta * {
+  will-change: transform;
+}
+
+.spring-in {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0) scale(.965);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-spy-link,
+  .nav-spy-link::after {
+    transition: none !important;
+  }
+  .spring-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Rotating modal border animation */
+@keyframes rotatePlan {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes smoothSlideInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-40px); }
+}
