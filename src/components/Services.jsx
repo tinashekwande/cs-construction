@@ -4,31 +4,31 @@ const SERVICES_DATA = [
   {
     title: 'Renovations & Tiling',
     desc: 'Top-tier brickwork, plastering, skimming, professional tiling, painting, drywalls, and modern paving upgrades.',
-    img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80',
+    img: '/images/WhatsApp Image 2026-06-15 at 20.54.10.jpeg',
     tag: 'Finishes'
   },
   {
     title: 'Building & Brickwork',
-    desc: ' turnkey home builds, structural brickwork, extensions, boundary walls, and customized brick construction services.',
-    img: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80',
+    desc: 'Turnkey home builds, structural brickwork, extensions, boundary walls, and customized brick construction services.',
+    img: '/images/WhatsApp Image 2026-06-15 at 20.54.05.jpeg',
     tag: 'Structural'
   },
   {
     title: 'Professional Plumbing',
     desc: 'Expert geyser installations, unblocking drains, advanced leak detections, pressure testing, and emergency pipe repairs.',
-    img: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80',
+    img: '/images/WhatsApp Image 2026-06-15 at 20.54.01.jpeg',
     tag: 'Utilities'
   },
   {
     title: 'Roofing & Waterproofing',
     desc: 'Complete roof installations, advanced waterproofing systems, structural timber repair, ceiling replacement, and guttering.',
-    img: 'https://images.unsplash.com/photo-1632759162463-157d6f851595?w=800&q=80',
+    img: '/images/WhatsApp Image 2026-06-13 at 16.08.54 (1).jpeg',
     tag: 'Protection'
   },
   {
     title: 'Maintenance & Partitioning',
     desc: 'Drywall partitioning, minor electrical repairs, painting maintenance, paving restorations, and structural repairs.',
-    img: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?w=800&q=80',
+    img: '/images/WhatsApp Image 2026-06-13 at 16.08.53.jpeg',
     tag: 'Support'
   }
 ];

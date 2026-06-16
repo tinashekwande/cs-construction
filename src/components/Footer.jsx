@@ -95,6 +95,17 @@ export default function Footer({ onOpenQuote, currentPage, onNavigate }) {
                   Request an Estimate
                 </a>
               </li>
+              <li>
+                <a 
+                  href="http://localhost:3000/login" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm text-slate-500 hover:text-amber-600 hover:font-bold transition-all duration-200 font-geist inline-flex items-center gap-1.5"
+                >
+                  <span>Staff Portal</span>
+                  <span className="bg-amber-500/10 text-amber-700 dark:text-amber-500 text-[9px] font-extrabold px-1.5 py-0.5 rounded border border-amber-500/15">Admin</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
