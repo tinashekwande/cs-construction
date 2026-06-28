@@ -67,8 +67,8 @@ export default function Process() {
 
               <div className="overflow-hidden min-h-[320px] bg-slate-100 ring-slate-200 ring-1 rounded-2xl relative shadow-md">
                 <img
-                  src="https://images.unsplash.com/photo-1617174699241-f461180aa2b4?w=1600&q=80"
-                  alt="Completed kitchen renovation project by CS Construction — Cape Town professional builder"
+                  src="/images/WhatsApp Image 2026-06-13 at 16.08.55.jpeg"
+                  alt="Real home renovation and plastering work by CS Construction team"
                   className="opacity-100 w-full h-full object-cover rounded-2xl"
                   loading="lazy"
                 />
