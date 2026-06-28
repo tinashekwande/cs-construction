@@ -1,5 +1,5 @@
 # CS Construction & Projects — robots.txt
-# https://csconstructionprojects.co.za/robots.txt
+# https://cs-construction.co.za/robots.txt
 
 User-agent: *
 Allow: /
@@ -15,4 +15,4 @@ Disallow: /api/
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://csconstructionprojects.co.za/sitemap.xml
+Sitemap: https://cs-construction.co.za/sitemap.xml

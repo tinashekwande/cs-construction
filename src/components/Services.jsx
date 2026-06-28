@@ -99,7 +99,7 @@ export default function Services({ onOpenQuote }) {
             <div className="w-3 h-3 rounded-full bg-slate-300"></div>
             <div className="w-3 h-3 rounded-full bg-slate-300"></div>
             <div className="ml-4 text-xs font-medium text-slate-400 font-geist">
-              csconstructionprojects.co.za/services
+              cs-construction.co.za/services
             </div>
           </div>
 

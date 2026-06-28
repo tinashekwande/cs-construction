@@ -5,10 +5,10 @@ import useSEO from '../hooks/useSEO';
 const HOME_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'GeneralContractor', 'Plumber'],
-  '@id': 'https://csconstructionprojects.co.za/#localbusiness',
+  '@id': 'https://cs-construction.co.za/#localbusiness',
   'name': 'CS Construction & Projects',
   'description': 'Professional construction, building, home renovations, and plumbing services across Cape Town and the Western Cape.',
-  'url': 'https://csconstructionprojects.co.za/',
+  'url': 'https://cs-construction.co.za/',
   'telephone': '+27717270094',
   'email': 'stevenchimpeni8@gmail.com',
   'address': {

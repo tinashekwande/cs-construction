@@ -7,7 +7,7 @@ const CONTACT_SCHEMA = {
   '@type': 'ContactPage',
   'name': 'Contact CS Construction & Projects — Cape Town',
   'description': 'Contact CS Construction & Projects for building, renovation, and plumbing services in Cape Town and the Western Cape. Call, WhatsApp, or email us for a free quote.',
-  'url': 'https://csconstructionprojects.co.za/#contact',
+  'url': 'https://cs-construction.co.za/#contact',
   'mainEntity': {
     '@type': ['LocalBusiness', 'GeneralContractor', 'Plumber'],
     'name': 'CS Construction & Projects',

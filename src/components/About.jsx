@@ -7,7 +7,7 @@ const ABOUT_SCHEMA = {
   '@type': 'AboutPage',
   'name': 'About CS Construction & Projects — Cape Town Building & Plumbing Experts',
   'description': 'CS Construction & Projects is a professional building contractor and plumbing company in Cape Town, Western Cape, led by founder Steven Chimpeni with over 10 years of hands-on construction experience.',
-  'url': 'https://csconstructionprojects.co.za/#about',
+  'url': 'https://cs-construction.co.za/#about',
   'mainEntity': {
     '@type': ['LocalBusiness', 'GeneralContractor'],
     'name': 'CS Construction & Projects Pty Ltd',

@@ -6,7 +6,7 @@
 
   <!-- Home Page -->
   <url>
-    <loc>https://csconstructionprojects.co.za/</loc>
+    <loc>https://cs-construction.co.za/</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- About Page -->
   <url>
-    <loc>https://csconstructionprojects.co.za/#about</loc>
+    <loc>https://cs-construction.co.za/#about</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -22,7 +22,7 @@
 
   <!-- Portfolio / Gallery -->
   <url>
-    <loc>https://csconstructionprojects.co.za/#gallery</loc>
+    <loc>https://cs-construction.co.za/#gallery</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -30,7 +30,7 @@
 
   <!-- Contact Page -->
   <url>
-    <loc>https://csconstructionprojects.co.za/#contact</loc>
+    <loc>https://cs-construction.co.za/#contact</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -38,7 +38,7 @@
 
   <!-- Services Section -->
   <url>
-    <loc>https://csconstructionprojects.co.za/#services</loc>
+    <loc>https://cs-construction.co.za/#services</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
