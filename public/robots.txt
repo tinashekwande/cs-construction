@@ -1,0 +1,18 @@
+# CS Construction & Projects — robots.txt
+# https://csconstructionprojects.co.za/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin and portal routes
+Disallow: /portal/
+Disallow: /portal/dashboard/
+Disallow: /portal/login/
+Disallow: /_next/
+Disallow: /api/
+
+# Crawl-delay for polite bots
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://csconstructionprojects.co.za/sitemap.xml

@@ -78,15 +78,16 @@ export default function Services({ onOpenQuote }) {
   return (
     <section id="services" className="border-y motion-section bg-slate-50 border-slate-200 pt-24 pb-24 relative overflow-hidden">
       <div className="lg:px-8 max-w-7xl mr-auto ml-auto pr-6 pl-6">
+        {/* ── Header ──────────────────────────────────────────────────── */}
         <div className="text-center mb-16">
           <span className="text-xs font-semibold tracking-widest text-blue-600 uppercase mb-4 block font-geist">
             OUR CORE EXPERTISE
           </span>
           <h2 className="md:text-5xl text-3xl text-slate-900 tracking-tight mb-4 font-jakarta font-medium">
-            Building &amp; Plumbing Services
+            Professional Building &amp; Plumbing Services in Cape Town
           </h2>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto font-geist">
-            We provide a complete range of residential and commercial property construction and repair services in Cape Town.
+            From kitchen renovations, bathroom remodels, and new home construction to emergency plumbing, geyser installations, and drain cleaning — we cover every project in Cape Town and the Western Cape.
           </p>
         </div>
 
@@ -98,9 +99,10 @@ export default function Services({ onOpenQuote }) {
             <div className="w-3 h-3 rounded-full bg-slate-300"></div>
             <div className="w-3 h-3 rounded-full bg-slate-300"></div>
             <div className="ml-4 text-xs font-medium text-slate-400 font-geist">
-              csconstruction.co.za/services
+              csconstructionprojects.co.za/services
             </div>
           </div>
+
 
           <div className="md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-10 bg-white rounded-b-xl pt-6 pr-6 pb-6 pl-6 gap-x-10 gap-y-10">
             {/* Left Column: Scope Selector */}
@@ -309,13 +311,91 @@ export default function Services({ onOpenQuote }) {
         </div>
 
         <div className="flex mt-12 justify-center">
-          <button 
-            onClick={(e) => { e.preventDefault(); onOpenQuote(); }} 
+          <button
+            onClick={(e) => { e.preventDefault(); onOpenQuote(); }}
             className="btn-brand-red h-11 px-6 rounded-xl text-xs font-semibold tracking-wide font-geist hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 cursor-pointer flex items-center justify-center"
           >
             Request a Free Estimate
           </button>
         </div>
+
+        {/* ── All Services at a Glance ─────────────────────────────────── */}
+        <div className="mt-20 border-t border-slate-200 pt-16">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl font-medium text-slate-900 tracking-tight font-jakarta mb-2">
+              All Construction &amp; Plumbing Services
+            </h3>
+            <p className="text-slate-500 text-sm font-geist max-w-xl mx-auto">
+              CS Construction &amp; Projects offers a complete range of building and plumbing services across Cape Town and the Western Cape.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Construction */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <h4 className="text-xs font-bold text-blue-600 uppercase tracking-widest font-geist mb-4">🏗️ Construction</h4>
+              <ul className="space-y-2 text-xs text-slate-600 font-geist">
+                {['New Home Construction', 'Home Extensions & Additions', 'Commercial Construction', 'Residential Building', 'Industrial Construction', 'Office & Retail Build-Outs', 'Foundation Work', 'Structural Repairs', 'Boundary Walls & Fencing', 'Carports & Outbuildings', 'Paving & Driveways'].map(s => (
+                  <li key={s} className="flex items-start gap-1.5"><span className="text-blue-400 mt-0.5 shrink-0">›</span>{s}</li>
+                ))}
+              </ul>
+            </div>
+            {/* Renovations */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <h4 className="text-xs font-bold text-blue-600 uppercase tracking-widest font-geist mb-4">🔨 Renovations</h4>
+              <ul className="space-y-2 text-xs text-slate-600 font-geist">
+                {['Kitchen Renovations Cape Town', 'Bathroom Renovations Cape Town', 'Home Renovations', 'Building Renovations', 'Waterproofing', 'Roofing Contractor', 'Tiling Services', 'Plastering & Skimming', 'Painting', 'Drywall Partitioning', 'Ceiling Replacement'].map(s => (
+                  <li key={s} className="flex items-start gap-1.5"><span className="text-blue-400 mt-0.5 shrink-0">›</span>{s}</li>
+                ))}
+              </ul>
+            </div>
+            {/* Plumbing */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <h4 className="text-xs font-bold text-blue-600 uppercase tracking-widest font-geist mb-4">🔧 Plumbing</h4>
+              <ul className="space-y-2 text-xs text-slate-600 font-geist">
+                {['Emergency Plumbing Cape Town', 'Burst Pipe Repairs', 'Geyser Installation & Repair', 'Solar Geyser Installation', 'Heat Pump Installation', 'Leak Detection & Repair', 'Drain Cleaning & Unblocking', 'Toilet Installations', 'Bathroom Plumbing', 'Commercial Plumbing', 'CCTV Drain Inspection', 'Pipe Relining'].map(s => (
+                  <li key={s} className="flex items-start gap-1.5"><span className="text-blue-400 mt-0.5 shrink-0">›</span>{s}</li>
+                ))}
+              </ul>
+            </div>
+            {/* Project Management */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <h4 className="text-xs font-bold text-blue-600 uppercase tracking-widest font-geist mb-4">📋 Project Management</h4>
+              <ul className="space-y-2 text-xs text-slate-600 font-geist">
+                {['Construction Project Management', 'Quantity Surveying Support', 'Building Plan Submissions', 'Site Inspections', 'Building Quotes & Estimates', 'Compliance Support', 'Sewage & Drainage', 'Stormwater Drainage', 'Water Pressure Solutions', 'Water Meter Installations', 'Plumbing Compliance Certificates'].map(s => (
+                  <li key={s} className="flex items-start gap-1.5"><span className="text-blue-400 mt-0.5 shrink-0">›</span>{s}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Service Areas ────────────────────────────────────────────── */}
+        <div className="mt-12 bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <h3 className="text-lg font-medium text-slate-900 tracking-tight font-jakarta mb-1">
+                Serving Cape Town &amp; the Western Cape
+              </h3>
+              <p className="text-xs text-slate-500 font-geist">
+                Building contractor and plumbing services across the entire Cape Town metro and surrounding regions.
+              </p>
+            </div>
+            <button
+              onClick={(e) => { e.preventDefault(); onOpenQuote(); }}
+              className="shrink-0 text-xs font-semibold text-blue-600 border border-blue-200 bg-blue-50 px-4 h-9 rounded-xl font-geist hover:bg-blue-100 transition-colors cursor-pointer"
+            >
+              Get a Free Quote →
+            </button>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {['Bellville', 'Parow', 'Goodwood', 'Durbanville', 'Brackenfell', 'Kraaifontein', 'Blue Downs', 'Mitchells Plain', 'Athlone', 'Wynberg', 'Claremont', 'Rondebosch', 'Observatory', 'Woodstock', 'Salt River', 'Mowbray', 'Pinelands', 'Milnerton', 'Table View', 'Bloubergstrand', 'Century City', 'Constantia', 'Hout Bay', 'Muizenberg', 'Fish Hoek', 'Somerset West', 'Strand', "Gordon's Bay", 'Stellenbosch', 'Paarl', 'Worcester'].map(area => (
+              <span key={area} className="text-[11px] font-medium text-slate-700 bg-slate-100 border border-slate-200 rounded-full px-3 py-1 font-geist">
+                📍 {area}
+              </span>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

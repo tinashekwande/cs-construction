@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import useSEO from '../hooks/useSEO';
+
 
 const CATEGORIES = ['All', 'Building', 'Renovations', 'Plumbing', 'Finishes'];
 
@@ -727,6 +729,12 @@ export default function Gallery() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideInterval = useRef(null);
 
+  // Per-page SEO for the portfolio gallery
+  useSEO({
+    title: 'Project Portfolio — Cape Town Building & Renovation Projects | CS Construction',
+    description: 'Browse 58 real construction and plumbing projects completed by CS Construction & Projects across Cape Town — kitchen renovations, home builds, tiling, roofing, waterproofing, and more.'
+  });
+
   useEffect(() => {
     // Animate cards on filter change
     gsap.fromTo('.gallery-card',
@@ -761,10 +769,10 @@ export default function Gallery() {
             Our Portfolio
           </span>
           <h1 className="text-4xl sm:text-5xl font-medium text-slate-900 tracking-tight font-jakarta mb-6 leading-tight">
-            Premium Projects &amp; Craftsmanship
+            CS Construction Portfolio — Cape Town Building &amp; Renovation Projects
           </h1>
           <p className="text-slate-600 font-jakarta text-base sm:text-lg leading-relaxed">
-            Explore all {PROJECTS.length} of our real construction projects across Cape Town — every image is authentic work delivered by the CS Construction team.
+            Browse all {PROJECTS.length} real construction, renovation, and plumbing projects completed by CS Construction &amp; Projects across Cape Town and the Western Cape. Every image shows authentic work by our team.
           </p>
         </div>
 

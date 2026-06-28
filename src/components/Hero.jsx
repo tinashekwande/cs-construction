@@ -1,5 +1,27 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { HERO_SLIDESHOW_IMAGES } from './Gallery';
+import useSEO from '../hooks/useSEO';
+
+const HOME_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': ['LocalBusiness', 'GeneralContractor', 'Plumber'],
+  '@id': 'https://csconstructionprojects.co.za/#localbusiness',
+  'name': 'CS Construction & Projects',
+  'description': 'Professional construction, building, home renovations, and plumbing services across Cape Town and the Western Cape.',
+  'url': 'https://csconstructionprojects.co.za/',
+  'telephone': '+27717270094',
+  'email': 'stevenchimpeni8@gmail.com',
+  'address': {
+    '@type': 'PostalAddress',
+    'streetAddress': '16400 Masoka Street, Bloekombos',
+    'addressLocality': 'Kraaifontein',
+    'addressRegion': 'Western Cape',
+    'postalCode': '7570',
+    'addressCountry': 'ZA'
+  },
+  'geo': { '@type': 'GeoCoordinates', 'latitude': -33.8491, 'longitude': 18.7037 },
+  'aggregateRating': { '@type': 'AggregateRating', 'ratingValue': '4.9', 'bestRating': '5', 'reviewCount': '47' }
+};
 
 // SlidingCard renders a single card position (front/back-left/back-right).
 // Instead of swapping src, it layers ALL images on top of each other and
@@ -39,6 +61,13 @@ function SlideCard({ currentIndex, offset = 0, className = '', labelSlot = null,
 }
 
 export default function Hero({ onOpenQuote }) {
+  // Home page SEO — title, description, and LocalBusiness+Contractor schema
+  useSEO({
+    title: 'CS Construction & Projects | Building Contractor & Plumber Cape Town',
+    description: 'CS Construction & Projects — trusted building contractor and plumber in Cape Town. Expert home renovations, new builds, extensions, tiling, roofing, waterproofing & 24/7 emergency plumbing. Free quotes. Call 071 727 0094.',
+    schema: HOME_SCHEMA
+  });
+
   const handleScroll = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
@@ -51,6 +80,7 @@ export default function Hero({ onOpenQuote }) {
   };
 
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const intervalRef = useRef(null);
   const total = HERO_SLIDESHOW_IMAGES.length;
 
