@@ -16,6 +16,7 @@ import { QuoteRequestModal } from './components/Modals';
 import Gallery from './components/Gallery';
 import About from './components/About';
 import Contact from './components/Contact';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -159,6 +160,9 @@ export default function App() {
       <Footer onOpenQuote={() => setIsQuoteOpen(true)} currentPage={currentPage} onNavigate={navigateTo} />
 
       <QuoteRequestModal isOpen={isQuoteOpen} onClose={() => setIsQuoteOpen(false)} />
+
+      {/* Floating WhatsApp Button */}
+      <FloatingWhatsApp />
     </div>
   );
 }
